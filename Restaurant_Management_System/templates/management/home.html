@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Management</title>
+</head>
+<body>
+    <h1>Welcome to the Restaurant Management System</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'menu_items' %}">Menu Items</a></li>
+            <li><a href="{% url 'orders' %}">Orders</a></li>
+            <li><a href="{% url 'tables' %}">Tables</a></li>
+            <li><a href="{% url 'inventory' %}">Inventory</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
