@@ -1,3 +1,8 @@
+from django.shortcuts import render
+
+def home(request):
+    return render(request, 'home.html')
+
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import MenuItem, Order, Table, InventoryItem
 from .forms import OrderForm, MenuItemForm, TableForm, InventoryItemForm
