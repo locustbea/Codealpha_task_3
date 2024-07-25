@@ -1,3 +1,10 @@
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('management.urls')),
+]
 """
 URL configuration for Restaurant_Management_System project.
 
@@ -14,22 +21,9 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.urls import path
-
 from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('menu_items/', views.menu_items, name='menu_items'),
-    path('menu_items/create/', views.create_menu_item, name='create_menu_item'),
-    path('orders/', views.orders, name='orders'),
-    path('orders/create/', views.create_order, name='create_order'),
-    path('tables/', views.tables, name='tables'),
-    path('tables/create/', views.create_table, name='create_table'),
-    path('inventory/', views.inventory, name='inventory'),
-    path('inventory/create/', views.create_inventory_item, name='create_inventory_item'),
-]
-urlpatterns = [
-    path('admin/', admin.site.urls),
 ]
